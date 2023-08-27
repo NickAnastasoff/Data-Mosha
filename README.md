@@ -18,8 +18,6 @@ Run `pip install -r requirements.txt`
 
 **Don't forget to add those 3 files to your path!**
 
-Then all thats left is to run main.py!
-
 # Effects you can achieve
 
 ## i-frame removal

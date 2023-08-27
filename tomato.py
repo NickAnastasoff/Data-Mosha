@@ -8,6 +8,7 @@ import subprocess
 #parse arguments
 parser = argparse.ArgumentParser(add_help=True)
 parser.add_argument("-i", "--input", help="input file")
+parser.add_argument("-o", "--output", help="output file")
 parser.add_argument('-m', "--mode", action='store', dest='modevalue',help='choose mode - void, random, reverse, invert, bloom, pulse, jiggle, overlap', default='void')
 parser.add_argument('-c', action='store', dest='countframes', default=1,help="how often to glitch (for modes that support it)")
 parser.add_argument('-n', action='store', dest='positframes', default=1,help="how many frames in the glitch (for modes that support it)")
@@ -18,6 +19,7 @@ parser.add_argument('-k', action='store', dest='kill', default=0.7, type=float,h
 args = parser.parse_args()
 
 filein = args.input
+fileout = args.output
 mode = args.modevalue
 countframes = args.countframes
 positframes = args.positframes
@@ -216,7 +218,7 @@ print("> step 4/5 : putting things back together")
 #name new file
 cname = '-c' + str(countframes) if int(countframes) > 1 else '' 
 pname = '-n' + str(positframes) if int(positframes) > 1 else ''
-fileout = filein[:-4] + '-' + mode + cname + pname + '.avi'
+fileout = fileout[:-4] + '.avi'
 
 #delete old file
 if os.path.exists(fileout):
@@ -239,7 +241,9 @@ bstream_until_marker(temp_idx1, fileout)
 os.remove(temp_hdrl)
 os.remove(temp_movi)
 os.remove(temp_idx1)
+os.remove(avi_file)
 os.rmdir(temp_dir)
 
 print("> step 5/5 : done - final idx size : " + str(len(final)))
 subprocess.run(['ffmpeg', '-i', fileout, fileout[:-4] + '.mp4'])
+os.remove(fileout)
