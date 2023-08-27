@@ -243,12 +243,7 @@ os.remove(temp_movi)
 os.remove(temp_idx1)
 os.remove(avi_file)
 os.rmdir(temp_dir)
-os.remove(avi_file)
 
 print("> step 5/5 : done - final idx size : " + str(len(final)))
 subprocess.run(['ffmpeg', '-i', fileout, fileout[:-4] + '.mp4'])
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 os.remove(fileout)
