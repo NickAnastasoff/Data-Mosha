@@ -142,8 +142,8 @@ if operation == "G":
     output_video = input("Please enter output video (default - output.mp4): ")
     if output_video == "":
         output_video = "output.mp4"
-    subprocess.call(f'python3 tomato.py -i {input_video} -m void', shell=True)
-    print(f'python3 tomato.py -i {input_video} -m void')
+    subprocess.call(f'python3 tomato.py -i {input_video} -o {output_video} -m void', shell=True)
+    print(f'python3 tomato.py -i {input_video} -o {output_video} -m void')
 
 if operation == "H":
     input_video = input("Please enter input video (default - input.mp4): ")
@@ -152,8 +152,8 @@ if operation == "H":
     output_video = input("Please enter output video (default - output.mp4): ")
     if output_video == "":
         output_video = "output.mp4"
-    subprocess.call(f'python3 tomato.py -i {input_video} -m random', shell=True)
-    print(f'python3 tomato.py -i {input_video} -m random')
+    subprocess.call(f'python3 tomato.py -i {input_video} -o {output_video} -m random', shell=True)
+    print(f'python3 tomato.py -i {input_video} -o {output_video} -m random')
 
 if operation == "I":
     input_video = input("Please enter input video (default - input.mp4): ")
@@ -162,8 +162,8 @@ if operation == "I":
     output_video = input("Please enter output video (default - output.mp4): ")
     if output_video == "":
         output_video = "output.mp4"
-    subprocess.call(f'python3 tomato.py -i {input_video} -m reverse', shell=True)
-    print(f'python3 tomato.py -i {input_video} -m reverse')
+    subprocess.call(f'python3 tomato.py -i {input_video} -o {output_video} -m reverse', shell=True)
+    print(f'python3 tomato.py -i {input_video} -o {output_video} -m reverse')
 
 if operation == "J":
     input_video = input("Please enter input video (default - input.mp4): ")
@@ -172,8 +172,8 @@ if operation == "J":
     output_video = input("Please enter output video (default - output.mp4): ")
     if output_video == "":
         output_video = "output.mp4"
-    subprocess.call(f'python3 tomato.py -i {input_video} -m invert', shell=True)
-    print(f'python3 tomato.py -i {input_video} -m invert')
+    subprocess.call(f'python3 tomato.py -i {input_video} -o {output_video} -m invert', shell=True)
+    print(f'python3 tomato.py -i {input_video} -o {output_video} -m invert')
 
 if operation == "K":
     input_video = input("Please enter input video (default - input.mp4): ")
@@ -189,9 +189,9 @@ if operation == "K":
     if output_video == "":
         output_video = "output.mp4"
     subprocess.call(
-        f'python3 tomato.py -i {input_video} -m bloom -c {number_duplicates} -n {number_frame} -o {output_video}',
+        f'python3 tomato.py -i {input_video} -o {output_video} -m bloom -c {number_duplicates} -n {number_frame} -o {output_video}',
         shell=True)
-    print(f'python3 tomato.py -i {input_video} -m bloom -c {number_duplicates} -n {number_frame} -o {output_video}')
+    print(f'python3 tomato.py -i {input_video} -o {output_video} -m bloom -c {number_duplicates} -n {number_frame} -o {output_video}')
     
 if operation == "L":
     input_video = input("Please enter input video (default - input.mp4): ")
@@ -207,9 +207,9 @@ if operation == "L":
     if output_video == "":
         output_video = "output.mp4"
     subprocess.call(
-        f'python3 tomato.py -i {input_video} -m pulse -c {number_duplicates} -n {number_frame} -o {output_video}',
+        f'python3 tomato.py -i {input_video} -o {output_video} -m pulse -c {number_duplicates} -n {number_frame} -o {output_video}',
         shell=True)
-    print(f'python3 tomato.py -i {input_video} -m pulse -c {number_duplicates} -n {number_frame} -o {output_video}')
+    print(f'python3 tomato.py -i {input_video} -o {output_video} -m pulse -c {number_duplicates} -n {number_frame} -o {output_video}')
     
 if operation == "M":
     input_video = input("Please enter input video (default - input.mp4): ")
@@ -225,9 +225,9 @@ if operation == "M":
     if output_video == "":
         output_video = "output.mp4"
     subprocess.call(
-        f'python3 tomato.py -i {input_video} -m overlap -c {number_duplicates} -n {number_frame} -o {output_video}',
+        f'python3 tomato.py -i {input_video} -o {output_video} -m overlap -c {number_duplicates} -n {number_frame} -o {output_video}',
         shell=True)
-    print(f'python3 tomato.py -i {input_video} -m overlap -c {number_duplicates} -n {number_frame} -o {output_video}')
+    print(f'python3 tomato.py -i {input_video} -o {output_video} -m overlap -c {number_duplicates} -n {number_frame} -o {output_video}')
     
 if operation == "N":
     input_video = input("Please enter input video (default - input.mp4): ")
@@ -240,7 +240,7 @@ if operation == "N":
     if output_video == "":
         output_video = "output.mp4"
     subprocess.call(
-        f'python3 tomato.py -i {input_video} -m jiggle -n {number_frame} -o {output_video}',
+        f'python3 tomato.py -i {input_video} -o {output_video} -m jiggle -n {number_frame} -o {output_video}',
         shell=True)
-    print(f'python3 tomato.py -i {input_video} -m jiggle -n {number_frame} -o {output_video}')
+    print(f'python3 tomato.py -i {input_video} -o {output_video} -m jiggle -n {number_frame} -o {output_video}')
     
