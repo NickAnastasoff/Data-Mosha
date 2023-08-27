@@ -4,7 +4,7 @@ This is a command line interface to make datamoshing easy and accesible to every
 
 **If you are using vscode and the file won't play, try playing it outside of vscode!**
 
-This repo is built off of tiberiuiancu/datamosher and itsKaspar/tomato, so thanks for the awesome code!
+This repo is built off of tiberiuiancu/datamoshing and itsKaspar/tomato, so thanks for the awesome code!
 
 ## Quick start!
 
