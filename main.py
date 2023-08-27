@@ -34,29 +34,29 @@ print("\tF - GET VECTORS AS JSON")
 
 print("\nitsKaspar/tomato")
 
-print("\tG - VOID does nothing")
-# python3 tomato.py -i {input_video} -m void
+print("\tG - KILL remove frames with data higher than min")
+# python3 tomato.py -i {input_video} -m void -k {kill}
 
 print("\tH - RANDOM randomizes frame order")
-# python3 tomato.py -i {input_video} -m random
+# python3 tomato.py -i {input_video} -m random -k {kill}
 
 print("\tI - REVERSE reverse frame order")
-# python3 tomato.py -i {input_video} -m reverse
+# python3 tomato.py -i {input_video} -m reverse -k {kill}
 
 print("\tJ - INVERT switches each consecutive frame witch each other")
-# python3 tomato.py -i {input_video} -m invert
+# python3 tomato.py -i {input_video} -m invert -k {kill}
 
 print("\tK - BLOOM duplicates c times p-frame number n")
-# python3 tomato.py -i {input_video} -m bloom -c {number_duplicates} -n {number_frame}
+# python3 tomato.py -i {input_video} -m bloom -c {number_duplicates} -n {number_frame} -k {kill}
 
 print("\tL - PULSE duplicates groups of c p-frames every n frames")
-# python3 tomato.py -i {input_video} -m pulse -c {number_duplicates} -n {number_frame}
+# python3 tomato.py -i {input_video} -m pulse -c {number_duplicates} -n {number_frame} -k {kill}
 
 print("\tM - OVERLAP copy group of c frames taken from every nth position")
-# python3 tomato.py -i {input_video} -m overlap -c {number_duplicates} -n {number_frame}
+# python3 tomato.py -i {input_video} -m overlap -c {number_duplicates} -n {number_frame} -k {kill}
 
 print("\tN - JIGGLE take frame from around current position. n parameter is spread size [broken]")
-# python3 tomato.py -i {input_video} -m jiggle -n {number_frame}
+# python3 tomato.py -i {input_video} -m jiggle -n {number_frame} -k {kill}
 print(" ____  ____  ____  ____  ____  ____  ____  ____  ____ ")
 operation = input("Please enter a letter: ").upper()
 
@@ -142,8 +142,11 @@ if operation == "G":
     output_video = input("Please enter output video (default - output.mp4): ")
     if output_video == "":
         output_video = "output.mp4"
-    subprocess.call(f'python3 tomato.py -i {input_video} -o {output_video} -m void', shell=True)
-    print(f'python3 tomato.py -i {input_video} -o {output_video} -m void')
+    kill_min = input("Please enter kill min (default - .5): ")
+    if kill_min == "":
+        kill_min = ".5"
+    subprocess.call(f'python3 tomato.py -i {input_video} -o {output_video} -m void -k {kill_min}', shell=True)
+    print(f'python3 tomato.py -i {input_video} -o {output_video} -m void -k {kill_min}')
 
 if operation == "H":
     input_video = input("Please enter input video (default - input.mp4): ")
@@ -152,7 +155,7 @@ if operation == "H":
     output_video = input("Please enter output video (default - output.mp4): ")
     if output_video == "":
         output_video = "output.mp4"
-    subprocess.call(f'python3 tomato.py -i {input_video} -o {output_video} -m random', shell=True)
+    subprocess.call(f'python3 tomato.py -i {input_video} -o {output_video} -m random ', shell=True)
     print(f'python3 tomato.py -i {input_video} -o {output_video} -m random')
 
 if operation == "I":
