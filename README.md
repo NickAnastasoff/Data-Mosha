@@ -2,8 +2,6 @@
 
 This is a command line interface to make datamoshing easy and accesible to everyone!
 
-**If you are using vscode and the file won't play, try playing it outside of vscode!**
-
 This repo is built off of tiberiuiancu/datamoshing and itsKaspar/tomato, so thanks for the awesome code!
 
 ![Command Line Interface](https://i.imgur.com/d14DQcY.png)
@@ -19,6 +17,8 @@ Run `pip install -r requirements.txt`
 `vector_motion.py` and `style_transfer.py` depend on `ffedit` and `ffgac`, which can be downloaded from [ffglitch.org](https://ffglitch.org/)
 
 **Don't forget to add those 3 files to your path!**
+
+**If you are using vscode and the file won't play, try playing it outside of vscode!**
 
 # Effects you can achieve
 
