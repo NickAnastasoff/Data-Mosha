@@ -6,6 +6,8 @@ This is a command line interface to make datamoshing easy and accesible to every
 
 This repo is built off of tiberiuiancu/datamoshing and itsKaspar/tomato, so thanks for the awesome code!
 
+![Command Line Interface](https://i.imgur.com/d14DQcY.png)
+
 ## Quick start!
 
 Make sure you have downloaded all the requirements!
