@@ -143,22 +143,3 @@ Shuffles all of the frames in the video:
 
 Copy 4 frames taken starting from every 2nd frame. [1 2 3 4 3 4 5 6 5 6 7 8 7 8...]:
 >python tomato.py -i input.avi -m overlap -c 4 -n 2
-
-
-## Why tomato ?
-
-I made tomato because I wanted to be able to glitch avi files regardless of the contained codec, the resolution and the file size while still being super duper fast and not needing to encode anything.
-
-## How does it work ?
-
-It reorders the frames inside the movi tag of your AVI file.
-
-## How should you use it
-
-Libraries used : numpy, argparse, os, re, random, struct, itertools
-
-I recommend preparing your AVI files with ffmpeg and the codec library of your choice. To read your glitched files I recommend VLC or Xine if you're under Linux. Both are great for visualizing content (especially xine for the random mode) but keep in mind you should always be experimenting and using different visualizers or tools to bake your files.
-
-If you have any questions or ideas feel free to send me an email at kaspar.ravel@gmail.com
-
-For more info on development : https://www.kaspar.wtf/blog/tomato-v2-0-avi-breaker
